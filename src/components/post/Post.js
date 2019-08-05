@@ -8,6 +8,7 @@ class Post extends Component {
         const content= {__html: contsubs};
         const catsubs=postdata.category.substring(0, 3)
         return (
+                    // post start
                     <div className={catsubs+" post"} >
                         <div className="image top">
                             <img src={postdata.image.thumbnail} alt=""/>
@@ -27,6 +28,7 @@ class Post extends Component {
                         </div>
                     </div>
                 </div>
+                // post end
         );
     }
 }

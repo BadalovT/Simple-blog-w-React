@@ -15,6 +15,7 @@ class Posts extends Component {
         }
     }
 
+    // function for load more button
     loadMore= () => {
         this.setState((prev) => {
           return {visible: prev.visible + 3};
@@ -27,15 +28,20 @@ class Posts extends Component {
         const filterText = this.props.filterText;
         const filtertextlover=filterText.toLowerCase()
         const postarray=[]
+        // loop data for show posts
         postdata.slice(0, this.state.visible).map((item)=>{
           const stritem=item.title;
           const titlelover=stritem.toLowerCase();
+          // find index of for search
           if (titlelover.indexOf(filtertextlover) === -1) {
             return this;
           }
+          // add to new array mapped elements from response
           return postarray.push(
             <div key={item.id} className="col-md-4 mb-5">
+                    {/* link for open inside post */}
                     <Link key={item.id} to={`/posts/${item.id} `}>
+                      {/* show posts  */}
                         <Post key={item.id} postdata={item}/> 
                     </Link>
             </div>
@@ -53,11 +59,13 @@ class Posts extends Component {
                   </div>
                 </div>
                 <div className="row">
+                  {/* show array which has mapped data from response and finded index of  */}
                   {postarray}
                 </div>
                 <div className="row">
                   <div className="col-12">
                     <div className="load-more">
+                      {/* load more button */}
                        {this.state.visible < postdata.length &&<button onClick={this.loadMore} type="button" className="load-more">Load more</button>}
                     </div>
                   </div>
