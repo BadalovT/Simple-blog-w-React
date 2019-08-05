@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import React, { Component } from 'react';
+import './App.css';
+import Search from './components/search/Search';
+import Nav from './components/nav/Nav';
+import Footer from './components/footer/Footer';
+import Content from './components/content/Content';
+import Logo from './img/Logo.svg'
+
+
+  class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filterText: '',
+    };
+  }
+  handleFilterTextChange=(filterText) => {
+    this.setState({
+      filterText: filterText
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+      <header>
+                <div className="container">
+                    <div className="headertop">
+                        <div className="logo">
+                                <img src={Logo} alt=""/>
+                        </div>
+                        <Search filterText={this.state.filterText}  onFilterTextChange={this.handleFilterTextChange}/>
+                    </div>
+                </div>
+            </header>
+      <Nav/>
+      <Content filterText={this.state.filterText}/>
+      <Footer/>
     </div>
-  );
+    );
+  }
 }
 
 export default App;
+
+
+

@@ -1,0 +1,123 @@
+nav{
+    margin-top: 20px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    
+}
+nav .navigation{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+nav .navigation ul{
+    padding-left: 0;
+    margin-left: 40px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+nav .navigation ul li{
+    list-style: none;
+    display: inline-block;
+    border-right: 1px solid lightgray;
+    margin-right: 20px;
+    padding-right: 20px;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: #303030;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: -0.336px;
+}
+.artboardbtn{
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+}
+.artboardbtn button{
+    background: #5fbb6c;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.576px;
+    outline: none;
+}
+
+.ReactModal__Content{
+    width: 30%;
+    height: 30vh;
+    position: absolute;
+    top: 90px !important;
+    left: unset !important;
+    right: 40px;
+    bottom: unset !important;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+    justify-content: space-between;
+    border: none !important;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.06);
+}
+.ReactModal__Content .modalhead{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.ReactModal__Content .modalhead p{
+    color: #5fbb6c;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: -0.336px;
+}
+.ReactModal__Content .modalfooter{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+    padding:10px 20px;
+}
+.ReactModal__Content .modalfooter .closemodal{
+    width: 58.19px;
+    height: 29.67px;
+    border: solid 1px #ececec;
+    background: #f7f9f9;
+    border-radius: 3px;
+    color: #6d758c;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: -0.336px;
+}
+.ReactModal__Content .modalfooter .postmodal{
+    width: 55.19px;
+    height: 29.67px;
+    background: #43a6eb;
+    border:none;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: -0.336px;
+}

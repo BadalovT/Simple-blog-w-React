@@ -1,0 +1,33 @@
+.posts .load-more{
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.posts .load-more button{
+    width: 109px;
+    height: 28px;
+    background: #43a6eb;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: -0.336px;
+    margin-bottom: 20px;
+}
+.posts .goverment{
+    padding: 15px 0;
+}
+.posts .goverment p{
+    color: #323232;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
