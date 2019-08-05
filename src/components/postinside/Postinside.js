@@ -30,22 +30,23 @@ class Postinside extends Component {
     render() {
         const post = this.state.post;
         if(post !== null && post !== undefined){
-        const contsubs= post[0].content;
+        const currentPost= post[0];
+        const contsubs= currentPost.content;
         const content= {__html: contsubs};
-        const catsubs=post[0].category.substring(0, 3)
+        const catsubs=currentPost.category.substring(0, 3)
         return (
             <div className="container">
                <div  className={catsubs+" postinside"}>
                           <div className="category">
                                   <p>
-                                     {post[0].category}
+                                     {currentPost.category}
                                   </p>
                               </div>
                           <div className="header">
                               <p>{post.title}</p>
                               </div>
                           <div className="image">
-                                  <img src={post[0].image.full} alt="Best practice"/>
+                                  <img src={currentPost.image.full} alt="Best practice"/>
                               </div>
                           <div className="postcontent">
                               <div className="text">
@@ -54,7 +55,7 @@ class Postinside extends Component {
                                   </p>
                               </div>
                               <div className="dateandauthor">
-                                  <p>on {post.created_at} / {post[0].author}</p>
+                                  <p>on {post.created_at} / {currentPost.author}</p>
                               </div>
                           </div>
                       </div>
